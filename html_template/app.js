@@ -61,15 +61,15 @@ const render = () => {
 
     transactions.forEach((e,i) => {
         transactionList.innerHTML = `
-        <li class="transaction ${e.type}">
+        <li className="transaction ${e.type}">
             <p>${e.name}</p>
-            <div class="right">
+            <div className="right">
                 <p>${currencySymbol}${e.amount}</p>
-                <button class="link" onclick="edit(${i})">
-                    <i class="fas fa-edit"></i>
+                <button className="link" onclick="edit(${i})">
+                    <i className="fas fa-edit"></i>
                 </button>
-                <button class="link" onclick="del(${i})">
-                    <i class="fas fa-trash-alt"></i>
+                <button className="link" onclick="del(${i})">
+                    <i className="fas fa-trash-alt"></i>
                 </button>
             </div>
         </li>

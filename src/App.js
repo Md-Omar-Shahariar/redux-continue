@@ -1,8 +1,17 @@
+import Balance from "./components/Balance";
+import Form from "./components/Form";
+import Layout from "./components/Layout";
+import Transactions from "./components/Transactions/Transactions";
+
 function App() {
     return (
-        <div className="App">
-            <div>Hello world</div>
-        </div>
+        <Layout>
+            <Balance>
+
+            </Balance>
+            <Form></Form>
+            <Transactions></Transactions>
+        </Layout>
     );
 }
 

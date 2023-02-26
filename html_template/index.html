@@ -9,14 +9,14 @@
         <link rel="shortcut icon" href="./images/favicon.png" />
     </head>
     <body>
-        <div class="App">
-            <div class="header">
+        <div className="App">
+            <div className="header">
                 <h1>Expense Tracker</h1>
             </div>
 
-            <div class="main">
-                <div class="container">
-                    <div class="top_card">
+            <div className="main">
+                <div className="container">
+                    <div className="top_card">
                         <p>Your Current Balance</p>
                         <h3>
                             <span>৳</span>
@@ -24,10 +24,10 @@
                         </h3>
                     </div>
 
-                    <div class="form">
+                    <div className="form">
                         <h3>Add new transaction</h3>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="transaction_name">Name</label>
                             <input
                                 type="text"
@@ -36,9 +36,9 @@
                             />
                         </div>
 
-                        <div class="form-group radio">
+                        <div className="form-group radio">
                             <label for="transaction_type">Type</label>
-                            <div class="radio_group">
+                            <div className="radio_group">
                                 <input
                                     type="radio"
                                     value="income"
@@ -47,7 +47,7 @@
                                 />
                                 <label for="transaction_type">Income</label>
                             </div>
-                            <div class="radio_group">
+                            <div className="radio_group">
                                 <input
                                     type="radio"
                                     value="expense"
@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div className="form-group">
                             <label for="transaction_amount">Amount</label>
                             <input
                                 type="number"
@@ -67,28 +67,28 @@
                             />
                         </div>
 
-                        <button class="btn">Add Transaction</button>
+                        <button className="btn">Add Transaction</button>
 
-                        <button class="btn cancel_edit">Cancel Edit</button>
+                        <button className="btn cancel_edit">Cancel Edit</button>
                     </div>
 
-                    <p class="second_heading">Your Transactions:</p>
+                    <p className="second_heading">Your Transactions:</p>
 
-                    <div class="conatiner_of_list_of_transactions">
+                    <div className="conatiner_of_list_of_transactions">
                         <ul>
-                            <li class="transaction income">
+                            <li className="transaction income">
                                 <p>Earned this month</p>
-                                <div class="right">
+                                <div className="right">
                                     <p>৳ 100</p>
-                                    <button class="link">
+                                    <button className="link">
                                         <img
-                                            class="icon"
+                                            className="icon"
                                             src="./images/edit.svg"
                                         />
                                     </button>
-                                    <button class="link">
+                                    <button className="link">
                                         <img
-                                            class="icon"
+                                            className="icon"
                                             src="./images/delete.svg"
                                         />
                                     </button>
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="footer">&copy;2022 Learn with Sumit</div>
+            <div className="footer">&copy;2022 Learn with Sumit</div>
         </div>
     </body>
 </html>
