@@ -76,38 +76,38 @@ const transactionSlice = createSlice({
       state.isLoading = false;
     });
     builder.addCase(changeTransaction.pending, (state) => {
-        state.isError = false;
-        state.isLoading = true;
-      });
-      builder.addCase(changeTransaction.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isError = false;
-        const indexToUpdate = state.transactions.findIndex(t=>t.id === action.payload.id)
-        state.transactions[indexToUpdate]=action.payload
-      });
-      builder.addCase(changeTransaction.rejected, (state, action) => {
-        state.isError = true;
-        state.error = action?.error?.message;
-        state.isLoading = false;
-      });
-      builder.addCase(removeTransaction.pending, (state) => {
-        state.isError = false;
-        state.isLoading = true;
-      });
-      builder.addCase(removeTransaction.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isError = false;
-        state.transactions = state.transactions.filter(t=>t.id !== action.payload.id)
-        
-      });
-      builder.addCase(removeTransaction.rejected, (state, action) => {
-        state.isError = true;
-        state.error = action?.error?.message;
-        state.isLoading = false;
-      });
-    
-    
-
+      state.isError = false;
+      state.isLoading = true;
+    });
+    builder.addCase(changeTransaction.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.isError = false;
+      const indexToUpdate = state.transactions.findIndex(
+        (t) => t.id === action.payload.id
+      );
+      state.transactions[indexToUpdate] = action.payload;
+    });
+    builder.addCase(changeTransaction.rejected, (state, action) => {
+      state.isError = true;
+      state.error = action?.error?.message;
+      state.isLoading = false;
+    });
+    builder.addCase(removeTransaction.pending, (state) => {
+      state.isError = false;
+      state.isLoading = true;
+    });
+    builder.addCase(removeTransaction.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.isError = false;
+      state.transactions = state.transactions.filter(
+        (t) => t.id !== action.payload.id
+      );
+    });
+    builder.addCase(removeTransaction.rejected, (state, action) => {
+      state.isError = true;
+      state.error = action?.error?.message;
+      state.isLoading = false;
+    });
   },
 });
-export default transactionSlice
+export default transactionSlice;
